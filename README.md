@@ -1,4 +1,4 @@
-# Eval Framework for Tonk Widgets!
+# Eval Framework for Tonk Widgets
 This is a proof-of-concept implementation of deepeval and linting that auto-runs after you submit a prompt for the pinpin model.
 
 ## Setup
@@ -39,5 +39,5 @@ My implementation doesn't save widgets using keepsync, and instead uses a shim t
   - pass@k and pass\^k for evaluating probability of correct output given k iterations 
   - codeBLEU for testing generated code against reference examples (templates etc)
 #### Evaluate existing LLM prompts 
-- Auto-eval any changes made to LLM prompts pushed on github;
+- Auto-eval any changes made to LLM prompts pushed on github
 - Optimise prompts using iterative testing methods
