@@ -5,11 +5,11 @@ This is a proof-of-concept implementation of deepeval and linting that auto-runs
 ```
 pip install -r requirements.txt
 npm install
-```
-#### ESLint
-```
 npm init @eslint/config@latest
 ```
+API keys needed:
+`GROQ_API_KEY`, `VITE_GROQ_API_KEY`
+
 #### To execute:
 ```
 npm run eval -- "your prompt here!"
