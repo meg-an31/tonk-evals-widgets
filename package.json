@@ -1,0 +1,27 @@
+{
+  "name": "evals-draft2",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "eslint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eval": "node src/eval-one.js"
+  },
+  "dependencies": {
+    "@ai-sdk/groq": "^2.0.9",
+    "@mastra/core": "^0.0.0-ai-v5-20250813235735",
+    "@mastra/libsql": "^0.0.0-ai-v5-20250813235735",
+    "@mastra/memory": "^0.0.0-ai-v5-20250813235735",
+    "react": "^19.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.3.0",
+    "typescript-eslint": "^8.39.1"
+  }
+}
