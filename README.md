@@ -15,7 +15,7 @@ API keys needed:
 npm run eval -- "your prompt here!"
 ```
 ### Changes to architecture
-My implementation doesn't save widgets  using keepsync, and instead uses a shim to save all files localy (see `shim.js`). This is just to simplify development; if the model successfully writes to a local file, then it will successfully write to keepsync. 
+My implementation doesn't save widgets  using keepsync, and instead uses a shim to save all files locally (see `shim.js`). This is just to simplify development; if the model successfully writes to a local file, then it will successfully write to keepsync. 
 
 ## Potential future pursuits 
 - Integrating a bundled, lightweight eval framework which provides the model with live feedback on its code as the user requests it;
