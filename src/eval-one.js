@@ -51,12 +51,15 @@ for (const path of getWidgetPath()) {
   }
 }
 
+console.log("\n\n------ LINTER EVALUATION ------");
+
 try{
   execSync(`npx eslint ${data.indexPath}`, { stdio: "inherit" });
   console.warn(`\n\n${data.indexPath} passed linter`);
 }
 catch (error) {
-  console.error(`Error running linter: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  console.error(`Potential error running linter: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  console.log("Please note, the linter will throw an error if any linting errors are found. it does not mean the execution failed.");
 }
 
 try{
@@ -64,7 +67,8 @@ try{
   console.warn(`\n\n${data.componentPath} passed linter`);
 }
 catch (error) {
-  console.error(`Error running linter: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  console.error(`Potential error running linter: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  console.log("Please note, the linter will throw an error if any linting errors are found. it does not mean the execution failed.");
 }
 
 //write to json file
@@ -75,16 +79,15 @@ catch (error) {
   console.error(`Error writing to json file: ${error instanceof Error ? error.message : 'Unknown error'}`);
 }
 
+console.log("\n\n------ MODEL EVALUATION ------");
+
 // make sure you are in the correct environment
-execSync('source src/eval-mcp/bin/activate', { stdio: "inherit" });
-// run the python script to evaluate the widget
+//execSync('source src/eval-mcp/bin/activate', { stdio: "inherit" });
 
 try{
-  execSync('deepeval test run src/eval-mcp/test_chatbot.py', { stdio: "inherit" });
+  execSync('deepeval test run src/test_chatbot.py', { stdio: "inherit" });
   console.log("Evaluation complete");
 }
 catch (error) {
   console.error(`Error running evaluation: ${error instanceof Error ? error.message : 'Unknown error'}`);
 }
-
-

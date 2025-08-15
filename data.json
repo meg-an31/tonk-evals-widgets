@@ -1,5 +1,5 @@
 {
-  "prompt": "",
-  "indexPath": "",
-  "componentPath": ""
+  "prompt": "create a pomodoro timer widget",
+  "indexPath": "widgets/generated/pomodoro-timer/index.js",
+  "componentPath": "widgets/generated/pomodoro-timer/component.tsx"
 }
