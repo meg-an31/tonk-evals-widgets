@@ -10,7 +10,7 @@ npm install
 ```
 npm init @eslint/config@latest
 ```
-### To execute:
+#### To execute:
 ```
 npm run eval -- "your prompt here!"
 ```
